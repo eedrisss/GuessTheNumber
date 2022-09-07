@@ -110,8 +110,7 @@ public class ServiceLayer {
         int partial = 0;
         
         for (int i = 0; i < guessChars.length; i++) {
-            // -1 indicates that index value of guessChars DNE in answer
-            // otherwise the number must be in the string. Then check where
+            
             if (answer.indexOf(guessChars[i]) > -1) {
                 if (guessChars[i] == answerChars[i]) {
                     exact++;

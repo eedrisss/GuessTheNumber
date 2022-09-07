@@ -35,7 +35,7 @@ public class GameDaoDB implements GameDao {
     @Override
     public Game getGameById(int gameId) {
         try {
-            final String SELECT_GAME_BY_ID = "SELECT * FROM game WHERE game_id = ?";
+            final String SELECT_GAME_BY_ID = "SELECT * FROM game WHERE game_Id = ?";
             return jdbc.queryForObject(SELECT_GAME_BY_ID, new GameMapper(), gameId);
         } catch(DataAccessException ex) {
             return null;
